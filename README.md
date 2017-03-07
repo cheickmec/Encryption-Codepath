@@ -10,7 +10,7 @@ The following **required** functionality is completed:
   * [X]  Required: Repair the symmetric encrypt and decrypt code
 
 2\. Encrypted Message 1
-  * [ ]  Required: Decrypt the government message
+  * [X]  Required: Decrypt the government message
   * [ ]  Required: Encrypt a response and include in this README
 
 3\. Generate Public-Private Keys
