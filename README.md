@@ -11,22 +11,22 @@ The following **required** functionality is completed:
 
 2\. Encrypted Message 1
   * [X]  Required: Decrypt the government message
-  * [ ]  Required: Encrypt a response and include in this README
+  * [X]  Required: Encrypt a response and include in this README
 
 3\. Generate Public-Private Keys
   * [X]  Required: Repair the key generator code
-  * [ ]  Required: Generate keys for "johnsteed" and add him to the Agent Directory
+  * [X]  Required: Generate keys for "johnsteed" and add him to the Agent Directory
 
 4\. Asymmetric Encrypt/Decrypt
   * [X]  Required: Repair the asymmetric encrypt and decrypt code
 
 5\. Create/Verify Signature
-  * [ ]  Required: Repair the create and verify signature code
-  
+  * [X]  Required: Repair the create and verify signature code
+
 6\. Encrypted Message 2
-  * [ ]  Required: Decrypt the message
-  * [ ]  Required: Verify the message
-  * [ ]  Required: Include a response message in this README
+  * [X]  Required: Decrypt the message
+  * [X]  Required: Verify the message
+  * [X]  Required: Include a response message in this README
 
 7\. Agent Messages
   * [ ]  Required: Repair the dropbox code
@@ -54,6 +54,9 @@ The following objectives are **optional**:
 
 * Advanced Objective 1\.
   * [ ]  Add support for other symmetric algorithms.
+## Messages
+Encrypted Message 1 Response: Ca/EflCqFy5u/pVIN7Uw2uZ1Y+BvXPqr+eUue7v0L8HMxgMSkjo3N5FRD2VrP/y6
+Encrypted Message 2 Response: The new agent codename is "johnsteed".
 
 ## Video Walkthrough
 
