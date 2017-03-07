@@ -41,7 +41,8 @@ function key_decrypt($string, $key, $cipher_method=CIPHER_METHOD) {
 
 
 // Asymmetric Encryption / Public-Key Cryptography
-
+$private_key = '';
+$public_key = '';
 // Cipher configuration to use for asymmetric encryption
 const PUBLIC_KEY_CONFIG = array(
     "digest_alg" => "sha512",
@@ -50,8 +51,20 @@ const PUBLIC_KEY_CONFIG = array(
 );
 
 function generate_keys($config=PUBLIC_KEY_CONFIG) {
-  $private_key = 'Ha ha!';
-  $public_key = 'Ho ho!';
+
+  //echo getenv("OPENSSL_CONF");
+  $resource = openssl_pkey_new($config);
+  // Extract private key from the pair
+  openssl_pkey_export($resource, $private_key);
+
+  // Extract public key from the pair
+  $key_details = openssl_pkey_get_details($resource);
+  $public_key = $key_details["key"];
+
+  $keys = array('private' => $private_key, 'public' => $public_key);
+
+  $private_key = $keys['public'];
+  $public_key = $keys['private'];
 
   return array('private' => $private_key, 'public' => $public_key);
 }

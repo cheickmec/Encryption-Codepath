@@ -7,7 +7,7 @@ Time spent: **X** hours spent in total
 The following **required** functionality is completed:
 
 1\. Symmetric Encrypt/Decrypt
-  * [ ]  Required: Repair the symmetric encrypt and decrypt code
+  * [X]  Required: Repair the symmetric encrypt and decrypt code
 
 2\. Encrypted Message 1
   * [ ]  Required: Decrypt the government message
