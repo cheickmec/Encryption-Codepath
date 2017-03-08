@@ -18,14 +18,15 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <link rel="stylesheet" media="all" href="includes/styles.css" />
+    <link rel="icon" type="image/png" href="/favicon.png">
   </head>
   <body>
-    
+
     <a href="index.php">Main menu</a>
     <br/>
 
     <h1>Generate Public-Private Keys</h1>
-    
+
     <div id="generate">
       <form action="" method="post">
         Generate a pair of public/private keys for use in public key cryptography.
@@ -33,7 +34,7 @@
           <input type="submit" name="submit" value="Generate">
         </div>
       </form>
-      
+
       <?php if(isset($public_key)) { ?>
       <div id="public-key">
         <h2>Public Key</h2>
@@ -47,6 +48,6 @@
       </div>
       <?php } ?>
     </div>
-    
+
   </body>
 </html>

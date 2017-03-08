@@ -10,17 +10,17 @@
   $result_text = '';
 
   if(isset($_POST['submit'])) {
-  
+
     if(isset($_POST['private_key'])) {
-    
+
       // This is a create signature request
       $message = isset($_POST['message']) ? $_POST['message'] : nil;
       $private_key = isset($_POST['private_key']) ? $_POST['private_key'] : nil;
       $result_signature = create_signature($message, $private_key);
       $signature = $result_signature;
-    
+
     } else {
-    
+
       // This is a verify signature request
       $message = isset($_POST['message']) ? $_POST['message'] : nil;
       $signature = isset($_POST['signature']) ? $_POST['signature'] : nil;
@@ -40,14 +40,15 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <link rel="stylesheet" media="all" href="includes/styles.css" />
+    <link rel="icon" type="image/png" href="/favicon.png">
   </head>
   <body>
-    
+
     <a href="index.php">Main menu</a>
     <br/>
 
     <h1>Asymmetric Encryption</h1>
-    
+
     <div id="encoder">
       <h2>Create Signature</h2>
 
@@ -64,13 +65,13 @@
           <input type="submit" name="submit" value="Sign">
         </div>
       </form>
-    
+
       <div class="result"><?php echo h($result_signature); ?></div>
       <div style="clear:both;"></div>
     </div>
-    
+
     <hr />
-    
+
     <div id="decoder">
       <h2>Verify Signature</h2>
 
@@ -95,6 +96,6 @@
       <div class="result"><?php echo h($result_text); ?></div>
       <div style="clear:both;"></div>
     </div>
-    
+
   </body>
 </html>

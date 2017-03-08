@@ -36,7 +36,7 @@
 
       <p>Messages may not exceed 245 characters.</p>
 
-      <form action="<?php echo '/post_message.php?id=' . h(u($agent['id'])); ?>" method="post">
+      <form action="<?php echo '/agents/post_message.php?id=' . h(u($agent['id'])); ?>" method="post">
         <div>
           <textarea class="large" name="plain_text" maxlength="245"></textarea>
         </div>

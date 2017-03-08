@@ -29,7 +29,7 @@ The following **required** functionality is completed:
   * [X]  Required: Include a response message in this README
 
 7\. Agent Messages
-  * [ ]  Required: Repair the dropbox code
+  * [X]  Required: Repair the dropbox code
   * [ ]  Required: Repair the messages area
   * [ ]  Required: Display encrypted messages for all agents
   * [ ]  Required: Messages indicate whether the message signature is valid

@@ -69,6 +69,9 @@ function generate_keys($config=PUBLIC_KEY_CONFIG) {
 }
 
 function pkey_encrypt($string, $public_key) {
+
+  $encrypted='';
+  //echo $public_key;
   openssl_public_encrypt($string, $encrypted, $public_key);
 
   return base64_encode($encrypted);
