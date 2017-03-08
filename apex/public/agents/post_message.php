@@ -13,8 +13,9 @@
     // No loop, only one result
     $agent = db_fetch_assoc($agent_result);
 
-    $sender_result = find_agent_by_id('1');
-    $sender = db_fetch_assoc($sender_result);
+    //$sender_result = find_agent_by_id('1');
+
+    $sender = $current_user;//db_fetch_assoc($sender_result);
 
     $plain_text = $_POST['plain_text'];
 
@@ -25,7 +26,7 @@
     $public_key = to_public_key($public_key);
     $private_key = to_private_key($private_key);
 
-    
+
     $encrypted_text = pkey_encrypt($plain_text, $public_key);
     $signature = create_signature($encrypted_text, $private_key);
 
@@ -55,7 +56,8 @@
     <title>Message Dropbox</title>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <link rel="stylesheet" media="all" href="<?php echo DOC_ROOT . '/includes/styles.css'; ?>" />
+    <link rel="stylesheet" media="all" href="/../includes/styles.css" />
+    <link rel="icon" type="image/png" href="/../favicon.png">
   </head>
   <body>
 

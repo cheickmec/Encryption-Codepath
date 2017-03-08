@@ -20,7 +20,8 @@
     <title>Messages</title>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <link rel="stylesheet" media="all" href="<?php echo DOC_ROOT . '/includes/styles.css'; ?>" />
+    <link rel="stylesheet" media="all" href="/../includes/styles.css" />
+    <link rel="icon" type="image/png" href="/../favicon.png">
   </head>
   <body>
 
@@ -34,6 +35,7 @@
     <?php } ?>
 
     <table>
+
       <tr>
         <th>Date</th>
         <th>To</th>
@@ -45,7 +47,21 @@
       <?php while($message = db_fetch_assoc($message_result)) { ?>
         <?php
           $created_at = strtotime($message['created_at']);
+          $sender = db_fetch_assoc(find_agent_by_id($message['sender_id']));
+          $message_text = $message['cipher_text'];
+          $signature = $message['signature'];
 
+          $verif_result = verify_signature($message_text, $signature, to_public_key($sender['public_key']));
+
+          $validity_text = '';
+          if($verif_result){
+            $validity_text = 'valid';
+            if($current_user['id'] == $agent['id']){
+              $message_text = pkey_decrypt($message_text, to_private_key($current_user['private_key']));
+            }
+          }else{
+            $validity_text = 'invalid';
+          }
           // Oooops.
           // My finger accidentally hit the delete-key.
           // Sorry, APEX!!!

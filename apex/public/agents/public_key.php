@@ -20,8 +20,8 @@
     <title>Public Key</title>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <link rel="stylesheet" media="all" href="<?php echo DOC_ROOT . '/includes/styles.css'; ?>" />
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" media="all" href="/../includes/styles.css" />
+    <link rel="icon" type="image/png" href="/../favicon.png">
   </head>
   <body>
 

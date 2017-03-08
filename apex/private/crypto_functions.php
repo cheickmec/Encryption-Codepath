@@ -100,6 +100,7 @@ function create_signature($data, $private_key) {
 
 function verify_signature($data, $signature, $public_key) {
   $raw_signature = base64_decode($signature);
+
   return openssl_verify($data, $raw_signature, $public_key);
 
 }
